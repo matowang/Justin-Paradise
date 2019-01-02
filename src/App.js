@@ -8,7 +8,7 @@ import LandingPage from './components/LandingPage.js';
 import Articles from './components/Articles.js'
 import Journy from './components/Journy.js'
 import ArticlePage from './components/ArticlePage.js';
-
+import Footer from './components/Footer.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -31,6 +31,7 @@ class App extends React.Component {
             <Route path="/article/123456" component={ArticlePage} />
             <Route path="/journy" component={Journy} />
           </Switch>
+          <Footer />
           <NeutralColorPallets />
         </div>
       </BrowserRouter>

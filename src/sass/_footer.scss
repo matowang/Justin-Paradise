@@ -1,0 +1,50 @@
+@import 'variables.scss';
+footer {
+    font-family: $roboto;
+    box-sizing: border-box;
+    width: 100vw;
+    max-width: 100%;
+    padding: 40px;
+    #footer_social-links {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-content: flex-start;
+        .social-icon {
+            margin: 2rem;
+            width: 3rem;
+            height: 3rem;
+            width: 40px;
+            height: 40px;
+            fill: neutral-c(8);
+        }
+    }
+    .footer_section {
+        margin: 2rem 0;
+        font-size: 1rem;
+        color: neutral-c(7);
+        .decor-line {
+            width: auto;
+            height: 0.5em;
+            background: $base-c2;
+        } 
+    }
+    #footer_credit{
+        .decor-line{
+            width: auto;
+            height: 0.2em;
+        }
+        a{
+            color: neutral-c(4);
+        }
+        color: neutral-c(4);
+        #footer_credit_social-links{
+            display: flex;
+            .social-icon{
+                width: 2em;
+                height: 2em;
+                margin-right: 2em;
+            }
+        }
+    }
+}

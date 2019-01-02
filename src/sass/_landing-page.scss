@@ -2,7 +2,9 @@
 #landing-page {
     padding-top: $navbar-height;
     box-sizing: border-box;
+    width: 100vw;
     height: 100vh;
+    max-width: 100%;
     background: $base-c1;
     color: white;
     text-align: center;

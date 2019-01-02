@@ -26,7 +26,7 @@ class Article extends React.Component {
         console.log(this.props.imgSrc);
         import('../' + this.props.imgSrc)
             .then(module => {
-                console.log(module);
+                //console.log(module);
                 this.setState({ imageSource: module.default });
             })
             .catch(e => console.log(e));
