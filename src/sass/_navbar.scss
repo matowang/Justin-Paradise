@@ -1,0 +1,36 @@
+@import 'variables.scss';
+nav {
+    background: $base-c1;
+    //background: blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: $navbar-height;
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        margin: 0;
+        padding: 0 2rem;
+        li {
+            padding: 0 5%;
+            
+            text-transform: uppercase;
+            font-family: $roboto;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+    #nav-logo {
+        height: $navbar-height;;
+    }
+}
+
+#space-for-nav {
+    height: $navbar-height;
+}

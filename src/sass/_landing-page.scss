@@ -1,0 +1,22 @@
+@import 'variables.scss';
+#landing-page {
+    padding-top: $navbar-height;
+    box-sizing: border-box;
+    height: 100vh;
+    background: $base-c1;
+    color: white;
+    text-align: center;
+    font-family: $karla;
+    font-size: 2rem;
+    p {
+        margin: 1rem;
+    }
+    button {
+        background: none;
+        border: solid white 0.1em;
+        border-radius: 0.5em;
+        color: white;
+        font-size: 1rem;
+        padding: 0.5em 1em;
+    }
+}
