@@ -1,4 +1,10 @@
+@import "../../node_modules/normalize.css/normalize.css";
 @import 'variables.scss';
+@import 'navbar.scss';
+@import 'landing-page.scss';
+@import 'footer.scss';
+@import 'description-intro.scss';
+@import 'article-page.scss';
 
 .big-word {
     font-size: 50px;

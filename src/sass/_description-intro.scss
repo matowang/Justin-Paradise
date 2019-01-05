@@ -1,0 +1,21 @@
+@import '_variables.scss';
+#description-intro {
+    background: $base-c2 url("../assets/portrait.svg") no-repeat right;
+    font: 1.2rem $roboto;
+    color: white;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    
+    .decor-line {
+        height: 0.5em;
+        width: 20em;
+        max-width: 100%;
+        background: white;
+    }
+    p {
+        width: 70%;
+        max-width: $m-screen-size;
+        min-width: $s-screen-size;
+    }
+}

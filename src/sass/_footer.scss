@@ -14,20 +14,34 @@ footer {
             margin: 2rem;
             width: 3rem;
             height: 3rem;
-            width: 40px;
-            height: 40px;
             fill: neutral-c(8);
         }
     }
-    .footer_section {
-        margin: 2rem 0;
-        font-size: 1rem;
-        color: neutral-c(7);
-        .decor-line {
-            width: auto;
-            height: 0.5em;
-            background: $base-c2;
-        } 
+    #footer_section-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .footer_section {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            color: neutral-c(7);
+            .decor-line {
+                width: auto;
+                height: 0.5em;
+                background: $base-c2;
+                @include tablet-size{
+                    width: 70%;
+                }
+            } 
+            @include tablet-size{
+                margin: 0 1rem;
+            }
+        }
+        @include tablet-size{
+            flex-direction: row;
+            margin: 2rem 0;
+        }
     }
     #footer_credit{
         .decor-line{

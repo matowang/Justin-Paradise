@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import '../sass/_navbar.scss'
 import logo from '../assets/signature.svg';
 
 export default class Navbar extends React.Component {

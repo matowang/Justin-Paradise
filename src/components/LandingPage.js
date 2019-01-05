@@ -1,5 +1,4 @@
 import React from "react";
-import '../sass/_landing-page.scss';
 const LandingPage = (props) => {
     return (
         <div id="landing-page">

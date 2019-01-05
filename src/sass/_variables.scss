@@ -1,9 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Karla');
-
 $base-c1: hsl(240, 46%, 22%);
 $base-c2: hsl(34, 80%, 52%);
 $contrast: 10;
+
+$s-screen-size: 320px;
+$m-screen-size: 700px;
+$l-screen-size: 1000px;
+
+@mixin tablet-size{
+    @media only screen and (min-width: $m-screen-size) {
+        @content;
+    }
+}
+
+@mixin desktop-size{
+    @media only screen and (min-width: $l-screen-size) {
+        @content;
+    }
+}
+
 @function neutral-c($lightness) {
     @return hsl(0,0%,$lightness * 10%);
 }
