@@ -6,6 +6,10 @@
 @import 'description-intro.scss';
 @import 'article-page.scss';
 
+html {
+    line-height: 1.5rem;
+}
+
 .big-word {
     font-size: 50px;
     font-weight: bold;
