@@ -2,14 +2,21 @@
     {
         "id": 123456,
         "title": "Article Template",
-        "intro": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "author": {
+            "firstName": "Matthew",
+            "middleName": "",
+            "lastName": "Wang",
+            "title": ""
+        },
+        "intro": "Markdown is a lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform.",
         "date": {
             "month": 12,
             "day": 31,
             "year": 2018
         },
         "frontImg": {
-            "src": "/article-template/frontImg.jpg",
+            "src": "/article-template/front-img.png",
+            "alt": "Front picture description",
             "top": "50%",
             "left": "0%"
         },
