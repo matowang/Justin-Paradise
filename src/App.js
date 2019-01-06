@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "./sass/styles.scss";
 
 import Navbar from './components/Navbar.js';
@@ -8,6 +8,7 @@ import Articles from './components/Articles.js'
 import Journy from './components/Journy.js'
 import ArticlePage from './components/ArticlePage.js';
 import Footer from './components/Footer.js';
+import ErrorPage from "./components/ErrorPage";
 
 
 class App extends React.Component {
@@ -18,22 +19,21 @@ class App extends React.Component {
   }
   render() {
     return (
-      <BrowserRouter>
-        <div>
-          <header>
-            <Navbar />
-          </header>
-          {/*adds space for navbar if it is not landing page*/}
-          <Route path={new RegExp("/([a-zA-Z_0-9]+)")} component={SpaceForNav} />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/articles" component={Articles} />
-            <Route path="/article/123456" component={ArticlePage} />
-            <Route path="/journy" component={Journy} />
-          </Switch>
-          <Footer />
-        </div>
-      </BrowserRouter>
+      <div>
+        <header>
+          <Navbar />
+        </header>
+        {/*adds space for navbar if it is not landing page*/}
+        <Route path={new RegExp("/([a-zA-Z_0-9]+)")} component={SpaceForNav} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/articles" component={Articles} />
+          <Route path={"/articles/:id"} component={ArticlePage} />
+          <Route path="/journy" component={Journy} />
+          <Route component={ErrorPage} />
+        </Switch>
+        <Footer />
+      </div>
     );
   }
 };

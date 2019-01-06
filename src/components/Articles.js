@@ -1,21 +1,20 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+import articlesData from "../data/articles/articles-data.json";
+
 export default class Articles extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            articleIds: []
-        };
-    }
     render() {
+        const cardComponents = articlesData.map(a =>
+            <ArticleCard imgSrc={a.frontImg.src} title={a.title} intro={a.intro} link={`articles/${a.id}`} key={a.id} />
+        );
         return (
             <div>
-                <h1>Articles</h1>
-                <Article title="title" />
+                {cardComponents}
             </div>
         );
     }
 }
-class Article extends React.Component {
+class ArticleCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -23,10 +22,8 @@ class Article extends React.Component {
         }
     }
     componentDidMount() {
-        console.log(this.props.imgSrc);
-        import('../' + this.props.imgSrc)
+        import('../data/articles' + this.props.imgSrc)
             .then(module => {
-                //console.log(module);
                 this.setState({ imageSource: module.default });
             })
             .catch(e => console.log(e));
@@ -35,13 +32,13 @@ class Article extends React.Component {
         return (
             <article className="article-card">
                 <img src={this.state.imageSource} alt="Article" width="100px"></img>
-                <h2>{this.props.title}</h2>
+                <h2><Link to={this.props.link}>{this.props.title}</Link></h2>
                 <p className="article-card__intro">{this.props.intro}</p>
             </article>
         );
     }
 }
-Article.defaultProps = {
+ArticleCard.defaultProps = {
     imgSrc: "assets/drawing.jpg",
     title: "No Title",
     intro: "No Description"

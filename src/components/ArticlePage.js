@@ -8,7 +8,8 @@ import monthNames from '../data/months.json';
 export default class ArticlePage extends React.Component {
     constructor(props) {
         super(props);
-        this.articleData = articlesData.find(x => x.id === this.props.articleID);
+        this.articleData = articlesData.find(x => x.id === parseInt(props.match.params.id));
+        console.log("Directed to article:" + props.match.params.id);
         this.state = {
             contentComponent: "Loading...",
             frontImageSrc: ""
@@ -43,8 +44,8 @@ export default class ArticlePage extends React.Component {
                     <h1>{articleData.title}</h1>
                     <p id="date">{`${monthNames[parseInt(date.month) - 1].abbreviation} ${date.day}, ${date.year}`}</p>
                     <p id="author-name">{`${author.title} ${author.firstName} ${author.middleName} ${author.lastName}`}</p>
-                    <img id="front-img" src={this.state.frontImageSrc} alt={articleData.frontImg.alt} />
                     <p>{articleData.intro}</p>
+                    <img id="front-img" src={this.state.frontImageSrc} alt={articleData.frontImg.alt} />
                 </header>
                 <hr />
                 <div id="content">{this.state.contentComponent}</div>
