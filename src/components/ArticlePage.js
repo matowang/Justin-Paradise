@@ -17,6 +17,7 @@ export default class ArticlePage extends React.Component {
     }
     componentDidMount() {
         const articleData = this.articleData;
+        document.title = articleData.title;
         import(`../data/articles${articleData.contentSrc}`) //gets markdown url
             .then((module) => { //markdown url stored in module
                 fetch(module.default).then(response => //gets text from module with module url
@@ -33,6 +34,9 @@ export default class ArticlePage extends React.Component {
                 this.setState({ frontImageSrc: imageSrc.default });
             })
             .catch(e => console.log(e));
+    }
+    componentWillUnmount() {
+        document.title = "Justin Paradise";
     }
     render() {
         const articleData = this.articleData;

@@ -16,7 +16,6 @@
     p {
         
         max-width: $m-screen-size;
-        //min-width: $s-screen-size;
         @include tablet-size {
             width: 70%;
         }
