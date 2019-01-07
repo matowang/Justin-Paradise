@@ -10,11 +10,14 @@ footer {
         display: flex;
         justify-content: center;
         align-content: flex-start;
+        max-width: 100%;
         .social-icon {
             margin: 2rem;
-            width: 3rem;
-            height: 3rem;
+            width: 1.5rem;
             fill: neutral-c(8);
+            @include tablet-size {
+                width: 3rem;
+            }
         }
     }
     #footer_section-container {
