@@ -1,10 +1,21 @@
 $base-c1: hsl(240, 46%, 22%);
-$base-c2: hsl(34, 80%, 52%);
+$base-c2: hsl(56, 100%, 45%);
 $contrast: 10;
 
 $s-screen-size: 320px;
 $m-screen-size: 700px;
 $l-screen-size: 1000px;
+
+$roboto: 'Roboto', sans-serif;
+$karla: 'Karla', sans-serif;
+$lora: 'Lora', serif;
+$thasadith: 'Thasadith', sans-serif;
+
+$navbar-height: 4rem;
+
+@function neutral-c($lightness) {
+    @return hsl(0,0%,$lightness * 10%);
+}
 
 @mixin tablet-size{
     @media only screen and (min-width: $m-screen-size) {
@@ -17,19 +28,3 @@ $l-screen-size: 1000px;
         @content;
     }
 }
-
-@function neutral-c($lightness) {
-    @return hsl(0,0%,$lightness * 10%);
-}
-@for $i from 0 through $contrast{
-    .neutral-bg-#{$i}{
-        background: neutral-c($i);
-    }
-}
-
-$roboto: 'Roboto', sans-serif;
-$karla: 'Karla', sans-serif;
-$lora: 'Lora', serif;
-$thasadith: 'Thasadith', sans-serif;
-
-$navbar-height: 4rem;

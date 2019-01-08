@@ -1,0 +1,14 @@
+[
+    {
+        "id": 123456,
+        "title": "Journy Template",
+        "imageSrcs": "/journy-template/",
+        "contentSrc": "/journy-template/content.md"
+    },
+    {
+        "id": 223456,
+        "title": "Journy Template2",
+        "imageSrcs": "/journy-template2/",
+        "contentSrc": "/journy-template2/content.md"
+    }
+]

@@ -1,8 +1,8 @@
 @import '_variables.scss';
 #description-intro {
-    background: $base-c2 url("../assets/portrait.svg") no-repeat right;
+    background: white url("../assets/portrait.svg") no-repeat right;
     font: 1.2rem $roboto;
-    color: white;
+    color: $base-c1;
     padding: 1em;
     display: flex;
     flex-direction: column;
@@ -11,7 +11,8 @@
         height: 0.5em;
         width: 20em;
         max-width: 100%;
-        background: white;
+        font-weight: bold;
+        background: $base-c1;
     }
     p {
         

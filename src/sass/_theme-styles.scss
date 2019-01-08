@@ -1,0 +1,7 @@
+@import 'variables.scss';
+
+@for $i from 0 through $contrast{
+    .neutral-bg-#{$i}{
+        background: neutral-c($i);
+    }
+}
