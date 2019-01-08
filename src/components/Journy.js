@@ -1,5 +1,6 @@
 import React from 'react';
 import journiesData from '../data/journies/journies-data.json';
+import ImgBgBlur from './ImageBgBlur.js';
 
 export default class Journy extends React.Component {
     constructor(props) {
@@ -12,18 +13,6 @@ export default class Journy extends React.Component {
         this.state = {
             imageComps: []
         }
-    }
-    componentDidMount() {
-        console.log(this.imageSrcs);
-        this.imageSrcs.filter(src => RegExp(journiesData[0].imageSrcs).test(src))
-            .forEach(src => {
-                import("../data/journies" + src.replace('.', '')).then(img => {
-                    const imageComp = <img src={img.default} alt="journy" key={img.default} />;
-                    this.setState(state => ({
-                        imageComps: [...state.imageComps, imageComp]
-                    }));
-                });
-            });
     }
     render() {
         return (
@@ -39,24 +28,28 @@ class JournyCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            imgComps: []
+            imgComps: [],
+            content: "loading...",
+            currentImgIndex: 0
         }
     }
     componentDidMount() {
         this.props.imgSrcs.forEach(src => {
-            import("../data/journies" + src.replace('.', '')).then(img => {
-                const imgComp = <img src={img.default} alt="journy" key={img.default} />;
-                this.setState(state => ({
-                    imgComps: [...state.imgComps, imgComp]
-                }));
-            });
+            import("../data/journies" + src.replace('.', ''))
+                .then(img => {
+                    const imgComp = <ImgBgBlur src={img.default} alt="journy" key={img.default} />;
+                    this.setState(state => ({
+                        imgComps: [...state.imgComps, imgComp]
+                    }));
+                });
         });
     }
     render() {
         return (
-            <section>
+            <section id="journy-section">
                 <h2>{this.props.title}</h2>
                 {this.state.imgComps}
+                <p>{this.state.content}</p>
             </section>
         )
     }

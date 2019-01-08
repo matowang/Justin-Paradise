@@ -2,12 +2,34 @@
     {
         "id": 123456,
         "title": "Journy Template",
+        "date": {
+            "start": {
+                "month": 12,
+                "day": 31,
+                "year": 2018
+            },
+            "end": {
+                "month": 12,
+                "day": 31,
+                "year": 2018
+            }
+        },
         "imageSrcs": "/journy-template/",
         "contentSrc": "/journy-template/content.md"
     },
     {
         "id": 223456,
         "title": "Journy Template2",
+        "date": {
+            "start": {
+                "month": 12,
+                "year": 2018
+            },
+            "end": {
+                "month": 12,
+                "year": 2018
+            }
+        },
         "imageSrcs": "/journy-template2/",
         "contentSrc": "/journy-template2/content.md"
     }
