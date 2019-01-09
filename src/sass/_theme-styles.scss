@@ -5,3 +5,8 @@
         background: neutral-c($i);
     }
 }
+
+.color1-border {
+    border-radius: 50%;
+    border: 0.2rem solid $base-c1;
+}
