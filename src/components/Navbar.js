@@ -7,7 +7,7 @@ export default class Navbar extends React.Component {
         return (
             <nav>
                 <ul>
-                    <li><NavLink to="/journy">journy</NavLink></li>
+                    <li><NavLink to="/journy">journey</NavLink></li>
                     <li><NavLink to="/"><img id="nav-logo" src={logo} alt="Justin Hoong" /></NavLink></li>
                     <li><NavLink to="/articles">articles</NavLink></li>
                 </ul>

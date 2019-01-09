@@ -17,7 +17,7 @@ export default class Journy extends React.Component {
     render() {
         return (
             <div id="journy-page">
-                <h1>Journy</h1>
+                <h1>Journey</h1>
                 {this.journyComps}
             </div>
         );
@@ -48,7 +48,7 @@ class JournyCard extends React.Component {
         return (
             <section id="journy-section">
                 <h2>{this.props.title}</h2>
-                {this.state.imgComps}
+                {this.state.imgComps[this.state.currentImgIndex]}
                 <p>{this.state.content}</p>
             </section>
         )
