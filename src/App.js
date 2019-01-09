@@ -5,7 +5,7 @@ import "./sass/styles.scss";
 import Navbar from './components/Navbar.js';
 import Home from './components/Home.js'
 import Articles from './components/Articles.js'
-import Journy from './components/Journy.js'
+import Journey from './components/Journey.js'
 import ArticlePage from './components/ArticlePage.js';
 import Footer from './components/Footer.js';
 import ErrorPage from "./components/ErrorPage";
@@ -29,7 +29,7 @@ class App extends React.Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/articles" component={Articles} />
           <Route path={"/articles/:id"} component={ArticlePage} />
-          <Route path="/journy" component={Journy} />
+          <Route path="/journey" component={Journey} />
           <Route component={ErrorPage} />
         </Switch>
         <Footer />
