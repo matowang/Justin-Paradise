@@ -1,6 +1,6 @@
 import React from 'react';
 import journeysData from '../data/journeys/journeys-data.json';
-import ImgBgBlur from './ImageBgBlur.js';
+import Slideshow from './Slideshow.js';
 
 export default class Journey extends React.Component {
     constructor(props) {
@@ -28,27 +28,28 @@ class JourneyCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            imgComps: [],
+            imgSrcs: [],
             content: "loading...",
-            currentImgIndex: 0
         }
     }
     componentDidMount() {
         this.props.imgSrcs.forEach(src => {
             import("../data/journeys" + src.replace('.', ''))
                 .then(img => {
-                    const imgComp = <ImgBgBlur src={img.default} alt="journey" key={img.default} />;
                     this.setState(state => ({
-                        imgComps: [...state.imgComps, imgComp]
+                        imgSrcs: [...state.imgSrcs, img.default]
                     }));
                 });
         });
     }
     render() {
+        // const imgComps = this.state.imgSrcs.map(src =>
+        //     <ImgBgBlur src={src} alt="journey" key={src} />
+        // );
         return (
             <section id="journey-section">
                 <h2>{this.props.title}</h2>
-                {this.state.imgComps[this.state.currentImgIndex]}
+                <Slideshow imgSrcs={this.state.imgSrcs} />
                 <p>{this.state.content}</p>
             </section>
         )
