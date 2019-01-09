@@ -43,7 +43,7 @@ export default class ArticlePage extends React.Component {
         const author = articleData.author;
         const date = articleData.date;
         return (
-            <article id="article-page">
+            <article id="article-page" class="article-font-sizing">
                 <header>
                     <h1>{articleData.title}</h1>
                     <p id="date">{`${monthNames[parseInt(date.month) - 1].abbreviation} ${date.day}, ${date.year}`}</p>

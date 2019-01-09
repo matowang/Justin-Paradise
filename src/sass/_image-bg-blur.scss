@@ -5,7 +5,13 @@
     position: relative;
     overflow: hidden;
     background: neutral-c(5);
-    .image-bg-blur_background {
+    @include tablet-size {
+        height: 20rem;
+    }
+    @include desktop-size {
+        height: 30rem;
+    }
+    &_background {
         height: 100%;
         width: 100%;
         position: absolute;
@@ -15,7 +21,7 @@
         filter: blur(17px);
         -webkit-filter: blur(17px);
     }
-    .image-bg-blur_tint {
+    &_tint {
         position: absolute;
         width: 100%;
         height: 100%;

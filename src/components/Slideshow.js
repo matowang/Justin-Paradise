@@ -37,10 +37,10 @@ export default class Slideshow extends React.Component {
             <div className="slideshow">
                 <div className="slider">
                     {imgComps[this.state.currentImgIdx]}
-                    {(this.state.currentImgIdx !== 0) && <button onClick={this.prevImage} className="slideshow_prevBtn">
+                    {(this.state.currentImgIdx !== 0) && <button onClick={this.prevImage} className="slider_prevBtn">
                         <img src={arrowBtn} alt="left arrow" />
                     </button>}
-                    {(this.state.currentImgIdx !== this.numOfImgs - 1) && <button onClick={this.nextImage} className="slideshow_nextBtn">
+                    {(this.state.currentImgIdx !== this.numOfImgs - 1) && <button onClick={this.nextImage} className="slider_nextBtn">
                         <img src={arrowBtn} alt="right arrow" />
                     </button>}
                 </div>

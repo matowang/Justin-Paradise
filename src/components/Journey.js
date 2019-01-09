@@ -17,7 +17,6 @@ export default class Journey extends React.Component {
     render() {
         return (
             <div id="journey-page">
-                <h1>Journey</h1>
                 {this.journeyComps}
             </div>
         );
@@ -43,11 +42,8 @@ class JourneyCard extends React.Component {
         });
     }
     render() {
-        // const imgComps = this.state.imgSrcs.map(src =>
-        //     <ImgBgBlur src={src} alt="journey" key={src} />
-        // );
         return (
-            <section id="journey-section">
+            <section className="article-font-sizing" id="journey-page_section">
                 <h2>{this.props.title}</h2>
                 <Slideshow imgSrcs={this.state.imgSrcs} />
                 <p>{this.state.content}</p>

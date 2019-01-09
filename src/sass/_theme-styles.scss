@@ -7,6 +7,15 @@
 }
 
 .color1-border {
-    border-radius: 50%;
     border: 0.2rem solid $base-c1;
+}
+
+.article-font-sizing {
+    font-size: 1rem;
+    @include tablet-size {
+        font-size: 1.1rem;
+    }
+    @include desktop-size {
+        font-size: 1.2rem;
+    }
 }

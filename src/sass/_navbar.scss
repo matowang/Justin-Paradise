@@ -18,12 +18,14 @@ nav {
         padding: 0 2rem;
         li {
             padding: 0 5%;
-            
             text-transform: uppercase;
             font-family: $roboto;
             a {
                 color: white;
                 text-decoration: none;
+                &.active-tab {
+                    border-bottom: 0.1rem solid white; 
+                }
             }
         }
     }

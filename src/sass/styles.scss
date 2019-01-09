@@ -1,14 +1,14 @@
 @import "../../node_modules/normalize.css/normalize.css";
 @import 'variables.scss';
+@import 'theme-styles.scss';
 @import 'navbar.scss';
 @import 'landing-page.scss';
 @import 'footer.scss';
 @import 'description-intro.scss';
 @import 'article-page.scss';
-@import 'journy-page.scss';
-@import 'theme-styles.scss';
 @import 'image-bg-blur.scss';
 @import 'slideshow.scss';
+@import 'journy-page.scss';
 
 html {
     line-height: 1.5;
