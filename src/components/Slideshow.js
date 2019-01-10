@@ -30,7 +30,7 @@ export default class Slideshow extends React.Component {
         const indicatorComps = [];
         for (let i = 0; i < this.numOfImgs; i++) {
             indicatorComps.push(
-                <div className={`slideshow_indicator ${i === this.state.currentImgIdx ? "slideshow_indicator--current" : ""}`} />
+                <div className={`slideshow_indicator ${i === this.state.currentImgIdx ? "slideshow_indicator--current" : ""}`} key={i} />
             );
         }
         return (
