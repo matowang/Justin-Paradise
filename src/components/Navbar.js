@@ -6,26 +6,27 @@ export default class Navbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            hovered: false
+            hovered: false,
+            clicked: false
         }
-        this.handleMouseOver = this.handleMouseOver.bind(this);
-        this.handleMouseOut = this.handleMouseOut.bind(this);
     }
-    handleMouseOver() {
-        console.log("Mouse Over");
+    handleMouseOver = () => {
         this.setState({ hovered: true });
     }
-    handleMouseOut() {
-        console.log("Mouse Out");
+    handleMouseOut = () => {
         this.setState({ hovered: false })
     }
+    handleClick = () => {
+        console.log("Click");
+        this.setState({ clicked: true });
+    }
     render() {
-        const className = this.state.hovered ? "dim" : "";
+        const className = this.state.hovered || this.state.clicked ? "dim" : "";
         return (
-            <nav className="navbar-height" onMouseEnter={this.handleMouseOver} onMouseLeave={this.handleMouseOut}>
+            <nav className="navbar-height" onMouseEnter={this.handleMouseOver} onMouseLeave={this.handleMouseOut} onClick={this.handleClick}>
                 <ul>
                     <NavButton className={className} to="/journey" activeClassName="active-tab">journey</NavButton>
-                    <NavButton className={className} to="/"><img className="navbar-height" id="nav-logo" src={logo} alt="Justin Hoong" /></NavButton>
+                    <NavButton exact className={className} to="/" activeClassName="active-tab"><img className="navbar-height" id="nav-logo" src={logo} alt="Justin Hoong" /></NavButton>
                     <NavButton className={className} to="/articles" activeClassName="active-tab">articles</NavButton>
                 </ul>
             </nav>

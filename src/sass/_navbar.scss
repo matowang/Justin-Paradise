@@ -21,11 +21,14 @@ nav {
             a {
                 color: white;
                 text-decoration: none;
-                &.active-tab {
-                    border-bottom: 0.1rem solid white; 
-                }
                 &.dim:not(:hover){ 
                     opacity: 0.5;
+                }
+                &.active, &.active-tab {
+                    opacity: 1 !important;
+                }
+                .active-tab {
+                    border-bottom: 0.1rem solid white; 
                 }
             }
         }
