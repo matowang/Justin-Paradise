@@ -24,7 +24,7 @@ class App extends React.Component {
           <Navbar />
         </header>
         {/*adds space for navbar if it is not landing page*/}
-        <Route path={new RegExp("/([a-zA-Z_0-9]+)")} component={SpaceForNav} />
+        <Route path={new RegExp("/([a-zA-Z_0-9]+)")} render={() => <div className="navbar-height"></div>} />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/articles" component={Articles} />
@@ -37,19 +37,4 @@ class App extends React.Component {
     );
   }
 };
-
-const SpaceForNav = (props) => {
-  return (
-    <div id="space-for-nav"></div>
-  );
-}
-
-// function NeutralColorPallets(props) {
-//   const pallet = [];
-//   for (let i = 0; i <= 10; i++) {
-//     pallet.push(<div className={"neutral-bg-" + i} style={{ width: "100px", height: "100px", float: "left" }} key={i}></div>);
-//   }
-//   return pallet;
-// }
-
 export default App;

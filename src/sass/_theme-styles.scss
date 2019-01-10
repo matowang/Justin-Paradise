@@ -6,6 +6,13 @@
     }
 }
 
+.navbar-height {
+    height: 3rem;
+    @include tablet-size {
+        height: 4rem;
+    }
+}
+
 .color1-border {
     border: 0.2rem solid $base-c1;
 }

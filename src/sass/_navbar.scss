@@ -1,12 +1,10 @@
 @import 'variables.scss';
 nav {
     background: $base-c1;
-    //background: blue;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: $navbar-height;
     z-index: 1;
     ul{
         list-style: none;
@@ -26,14 +24,10 @@ nav {
                 &.active-tab {
                     border-bottom: 0.1rem solid white; 
                 }
+                &.dim:not(:hover){ 
+                    opacity: 0.5;
+                }
             }
         }
     }
-    #nav-logo {
-        height: $navbar-height;;
-    }
-}
-
-#space-for-nav {
-    height: $navbar-height;
 }
