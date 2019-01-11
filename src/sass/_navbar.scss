@@ -27,7 +27,7 @@ nav {
                 &.active, &.active-tab {
                     opacity: 1 !important;
                 }
-                .active-tab {
+                &.active-tab {
                     border-bottom: 0.1rem solid white; 
                 }
             }

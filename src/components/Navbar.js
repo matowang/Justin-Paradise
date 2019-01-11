@@ -17,7 +17,6 @@ export default class Navbar extends React.Component {
         this.setState({ hovered: false })
     }
     handleClick = () => {
-        console.log("Click");
         this.setState({ clicked: true });
     }
     render() {
@@ -26,7 +25,7 @@ export default class Navbar extends React.Component {
             <nav className="navbar-height" onMouseEnter={this.handleMouseOver} onMouseLeave={this.handleMouseOut} onClick={this.handleClick}>
                 <ul>
                     <NavButton className={className} to="/journey" activeClassName="active-tab">journey</NavButton>
-                    <NavButton exact className={className} to="/" activeClassName="active-tab"><img className="navbar-height" id="nav-logo" src={logo} alt="Justin Hoong" /></NavButton>
+                    <NavButton exact className={className} to="/"><img className="navbar-height" id="nav-logo" src={logo} alt="Justin Hoong" /></NavButton>
                     <NavButton className={className} to="/articles" activeClassName="active-tab">articles</NavButton>
                 </ul>
             </nav>
