@@ -10,8 +10,10 @@
     @include desktop-size {
         width: 70%;
     }
-    hr:last-of-type{
-        display: none;
+    hr {
+        &:last-of-type{
+            display: none;
+        }
     }
 }
 .journey_section {
