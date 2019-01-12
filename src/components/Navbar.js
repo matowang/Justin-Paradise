@@ -3,19 +3,10 @@ import { NavLink } from "react-router-dom";
 import logo from '../assets/signature.svg';
 
 export default class Navbar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            clicked: false
-        }
-    }
-    handleClick = () => {
-        this.setState({ clicked: true });
-    }
     render() {
-        const className = this.props.hovered || this.state.clicked ? "dim" : "";
+        const className = this.props.hovered || this.props.clicked ? "dim" : "";
         return (
-            <nav className="navbar-height" onMouseEnter={this.props.onHover} onMouseLeave={this.props.onHoverOut} onClick={this.handleClick}>
+            <nav className="navbar-height" onMouseEnter={this.props.onHover} onMouseLeave={this.props.onHoverOut} onClick={this.props.onClick}>
                 <ul>
                     <NavButton className={className} to="/journey" activeClassName="active-tab">journey</NavButton>
                     <NavButton exact className={className} to="/"><img className="navbar-height" id="nav-logo" src={logo} alt="Justin Hoong" /></NavButton>
