@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import slider from './slider.js';
+import { navBar } from './navBar.js';
 
 export default combineReducers({
-    slider
+    navBar
 });

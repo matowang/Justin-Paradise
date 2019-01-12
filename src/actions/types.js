@@ -1,2 +1,1 @@
-export const NEXT_IMG = 'NEXT_IMG';
-export const PREV_IMG = 'PREV_IMG';
+export const NAV_HOVER = 'NAV_HOVER';

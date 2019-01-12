@@ -2,7 +2,8 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import "./sass/styles.scss";
 
-import Navbar from './components/Navbar.js';
+//import Navbar from './components/Navbar.js';
+import Navbar from './containers/Navbar.js';
 import Home from './components/Home.js'
 import Articles from './components/Articles.js'
 import Journey from './components/Journey.js'
