@@ -1,15 +1,16 @@
 import { connect } from 'react-redux';
-import { navHover } from '../actions';
+import { navHover, navHoverOut } from '../actions';
 import NavBar from '../components/Navbar';
 
 const mapStateToProps = (state) => {
     return {
-        hovered: state.navBar.navHovered
+        hovered: state.navBar.hovered
     }
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    onHover: () => dispatch(navHover())
+    onHover: () => dispatch(navHover()),
+    onHoverOut: () => dispatch(navHoverOut())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

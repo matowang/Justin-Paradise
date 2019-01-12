@@ -6,23 +6,16 @@ export default class Navbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            hovered: false,
             clicked: false
         }
-    }
-    handleMouseOver = () => {
-        this.setState({ hovered: true });
-    }
-    handleMouseOut = () => {
-        this.setState({ hovered: false })
     }
     handleClick = () => {
         this.setState({ clicked: true });
     }
     render() {
-        const className = this.state.hovered || this.state.clicked ? "dim" : "";
+        const className = this.props.hovered || this.state.clicked ? "dim" : "";
         return (
-            <nav className="navbar-height" onMouseEnter={this.handleMouseOver} onMouseLeave={this.handleMouseOut} onClick={this.handleClick}>
+            <nav className="navbar-height" onMouseEnter={this.props.onHover} onMouseLeave={this.props.onHoverOut} onClick={this.handleClick}>
                 <ul>
                     <NavButton className={className} to="/journey" activeClassName="active-tab">journey</NavButton>
                     <NavButton exact className={className} to="/"><img className="navbar-height" id="nav-logo" src={logo} alt="Justin Hoong" /></NavButton>
