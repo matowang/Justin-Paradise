@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "markdown-loader": "^4.0.0",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
     "react": "^16.7.0",
