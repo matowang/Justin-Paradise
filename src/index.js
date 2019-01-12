@@ -5,10 +5,15 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import ScrollToTop from './components/ScrollToTop';
 
+import { Provider } from 'react-redux';
+import store from './store.js';
+
 ReactDOM.render(
     <BrowserRouter>
         <ScrollToTop>
-            <App />
+            <Provider store={store}>
+                <App />
+            </Provider>
         </ScrollToTop>
     </BrowserRouter>,
     document.getElementById('root'));
