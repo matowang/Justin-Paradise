@@ -2,10 +2,13 @@ import { connect } from 'react-redux';
 import { navHover, navHoverOut, navClick } from '../actions';
 import NavBar from '../components/Navbar';
 
+const className = ({ hovered, clicked }) => {
+    return hovered || clicked ? "dim" : "" //if navbar is hovered or has been clicked lower opacity
+}
+
 const mapStateToProps = (state) => {
     return {
-        hovered: state.navBar.hovered,
-        clicked: state.navBar.clicked
+        className: className(state.navBar)
     }
 }
 
