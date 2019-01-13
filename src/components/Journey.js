@@ -6,12 +6,12 @@ import ReactMarkdown from 'react-markdown';
 export default class Journey extends React.Component {
     constructor(props) {
         super(props);
-        this.imageSrcs = require.context("../data/journeys", true, /\.(png|jpe?g|svg)$/).keys();
+        this.imageSrcs = require.context("../data/journeys", true, /\.(png|jpe?g|JPG|svg)$/).keys();
         this.journeyComps = journeysData.map((journeyData, i) => {
             let imgSrcs = this.imageSrcs.filter(src => RegExp(journeyData.imageSrcs).test(src))
             return (
                 <React.Fragment key={journeyData.id}>
-                    <JourneyCard title={journeyData.title} imgSrcs={imgSrcs} contentSrc={journeyData.contentSrc} />
+                    <JourneyCard title={journeyData.title} date={journeyData.date} imgSrcs={imgSrcs} contentSrc={journeyData.contentSrc} />
                     <hr className="style-two" />
                 </React.Fragment>
             )
@@ -55,11 +55,16 @@ class JourneyCard extends React.Component {
             .catch(e => console.log(e));
     }
     render() {
+        const { title, date } = this.props;
+        const dateSlashNotation = ({ month, day, year }) => {
+            return (month ? `${month}/` : '') + (day ? `${day}/` : '') + (year ? year : '')
+        }
         return (
-            <section className="article-font-sizing journey_section">
-                <h2 className="responsive-text-padding">{this.props.title}</h2>
+            <section className="article-font-sizing article-fonts-style journey_section">
+                <h2 className="responsive-text-padding">{title}</h2>
+                <p className="article-fonts-style--info responsive-text-padding">{`${dateSlashNotation(date.start)} - ${date.end ? dateSlashNotation(date.end) : 'Now'}`}</p>
                 <Slideshow imgSrcs={this.state.imgSrcs} />
-                <div className="journey_section_content responsive-text-padding"><ReactMarkdown source={this.state.content} /></div>
+                <div className="journey_section_content article-fonts-style--content responsive-text-padding"><ReactMarkdown source={this.state.content} /></div>
             </section>
         )
     }

@@ -9,9 +9,9 @@
                 "year": 2018
             },
             "end": {
-                "month": 12,
-                "day": 31,
-                "year": 2018
+                "month": 1,
+                "day": 13,
+                "year": 2019
             }
         },
         "imageSrcs": "/journey-template/",
@@ -31,6 +31,17 @@
             }
         },
         "imageSrcs": "/journey-template2/",
+        "contentSrc": "/journey-template2/content.md"
+    },
+    {
+        "id": 223476,
+        "title": "Journey Template REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
+        "date": {
+            "start": {
+                "year": 2018
+            }
+        },
+        "imageSrcs": "/journey-template3/",
         "contentSrc": "/journey-template2/content.md"
     }
 ]

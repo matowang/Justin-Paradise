@@ -5,7 +5,6 @@ import logo from '../assets/signature.svg';
 export default class Navbar extends React.Component {
     render() {
         const className = this.props.className;
-        console.log(className);
         return (
             <nav className="navbar-height" onMouseEnter={this.props.onHover} onMouseLeave={this.props.onHoverOut} onClick={this.props.onClick}>
                 <ul>
