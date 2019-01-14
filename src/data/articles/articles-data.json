@@ -113,5 +113,29 @@
             "left": "0%"
         },
         "contentSrc": "/JPWEB1001/JPWEB1001.md"
+    },
+    {
+        "id": 327458,
+        "title": "Thanksgiving",
+        "author": {
+            "firstName": "Justin",
+            "middleName": "",
+            "lastName": "Hoong",
+            "title": ""
+        },
+        "intro": "Thanksgiving Article.",
+        "date": {
+            "month": 11,
+            "day": 23,
+            "year": 2018
+        },
+        "frontImg": {
+            "src": "/JPWEB1001/new-year.png",
+            "alt": "Picture description",
+            "top": "50%",
+            "left": "0%"
+        },
+        "contentSrc": "/thanksgiving/article-content.md"
     }
+
 ]

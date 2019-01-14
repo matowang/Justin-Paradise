@@ -62,3 +62,7 @@
 ```json
 "contentSrc": "/article-template/content.md"
 ```
+10. Upload to real site
+- `git add .`
+- `git commit -m "message of what you did"`
+- `git push`
