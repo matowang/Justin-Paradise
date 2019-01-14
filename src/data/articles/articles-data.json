@@ -90,5 +90,28 @@
             "left": "0%"
         },
         "contentSrc": "/article-template/content.md"
+    },
+    {
+        "id": 327456,
+        "title": "JPWEB1001",
+        "author": {
+            "firstName": "Matthew and Justin",
+            "middleName": "Waong",
+            "lastName": "Hoang",
+            "title": "Mr"
+        },
+        "intro": "Course for how to operate Justin Paradise.",
+        "date": {
+            "month": 1,
+            "day": 14,
+            "year": 2019
+        },
+        "frontImg": {
+            "src": "/JPWEB1001/new-year.png",
+            "alt": "Picture description",
+            "top": "50%",
+            "left": "0%"
+        },
+        "contentSrc": "/JPWEB1001/JPWEB1001.md"
     }
 ]
