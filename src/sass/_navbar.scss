@@ -21,6 +21,7 @@ nav {
             a {
                 color: white;
                 text-decoration: none;
+                transition: opacity 225ms;
                 &.dim:not(:hover){ 
                     opacity: 0.5;
                 }
