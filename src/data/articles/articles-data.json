@@ -100,14 +100,14 @@
             "lastName": "Hoang",
             "title": "Mr"
         },
-        "intro": "Course for how to operate Justin Paradise.",
+        "intro": "This course teaches you how to operate Justin Paradise. Justin Paradise allows a platform for you to easily upload images and change articles. This course will teach you how to perform those techniques by showing you what you need to do to download, to change data, as well as how to eventually upload to the official site.",
         "date": {
             "month": 1,
             "day": 14,
             "year": 2019
         },
         "frontImg": {
-            "src": "/JPWEB1001/new-year.png",
+            "src": "/JPWEB1001/246x0w.jpg",
             "alt": "Picture description",
             "top": "50%",
             "left": "0%"
@@ -137,5 +137,4 @@
         },
         "contentSrc": "/thanksgiving/article-content.md"
     }
-
 ]

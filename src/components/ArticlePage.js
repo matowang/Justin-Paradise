@@ -23,7 +23,7 @@ export default class ArticlePage extends React.Component {
                 fetch(module.default).then(response => //gets text from module with module url
                     response.text()
                 ).then(text =>
-                    this.setState({ contentComponent: <ReactMarkdown source={text} /> }) //renders Markdown text into component 
+                    this.setState({ contentComponent: <ReactMarkdown escapeHtml={false} source={text} /> }) //renders Markdown text into component 
                 )
             })
             .catch(

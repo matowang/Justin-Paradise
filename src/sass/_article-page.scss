@@ -62,5 +62,10 @@
             border: 0.1em solid neutral-c(5);
             border-collapse: collapse;
         }
+        pre, code {
+            background: lighten($base-c2, 40%);
+            color: $base-c1;
+            line-height: 1em;
+        }
     }
 }
