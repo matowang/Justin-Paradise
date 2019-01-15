@@ -1,6 +1,7 @@
 @import 'variables.scss';
 
 #journey-page {
+    position: relative;
     margin: 0 auto;
     width: 100%;
     @include tablet-size {

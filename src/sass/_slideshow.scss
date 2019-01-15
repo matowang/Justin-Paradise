@@ -3,7 +3,23 @@
     position: relative;
     .slider{
         width: 100%;
+        height: 15rem;
         position: relative;
+        overflow: hidden;
+        @include tablet-size {
+            height: 20rem;
+        }
+        @include desktop-size {
+            height: 30rem;
+        }
+        .img-wrapper {
+            position: absolute;
+            height: 100%;
+            display: flex;
+            z-index: -1;
+            justify-content: flex-start;
+            transition: transform 300ms ease-in-out;
+        }
         &_prevBtn,&_nextBtn {
             outline: none;
             box-sizing: border-box;

@@ -9,24 +9,20 @@ export default class Slideshow extends React.Component {
         this.state = {
             currentImgIdx: 0
         };
-        this.nextImage = this.nextImage.bind(this);
-        this.prevImage = this.prevImage.bind(this);
     }
-    nextImage() {
-        this.setState(state => ({
-            currentImgIdx: state.currentImgIdx + (state.currentImgIdx < this.numOfImgs - 1 ? 1 : 0)
-        }));
+    nextImage = () => {
+        this.setState(state => (
+            state.currentImgIdx < this.numOfImgs - 1 ? { currentImgIdx: state.currentImgIdx + 1 } : state
+        ));
     }
-    prevImage() {
-        this.setState(state => ({
-            currentImgIdx: state.currentImgIdx - (state.currentImgIdx > 0 ? 1 : 0)
-        }));
+    prevImage = () => {
+        this.setState(state => (
+            state.currentImgIdx > 0 ? { currentImgIdx: state.currentImgIdx - 1 } : state
+        ));
     }
     render() {
-        this.numOfImgs = this.props.imgSrcs.length;
-        const imgComps = this.props.imgSrcs.map(src =>
-            <ImgBgBlur src={src} alt="journey picture" key={src} />
-        );
+        const { imgSrcs } = this.props;
+        this.numOfImgs = imgSrcs.length;
         const indicatorComps = [];
         for (let i = 0; i < this.numOfImgs; i++) {
             indicatorComps.push(
@@ -36,15 +32,17 @@ export default class Slideshow extends React.Component {
         return (
             <div className="slideshow">
                 <div className="slider">
-                    {imgComps[this.state.currentImgIdx]}
+                    <div className="img-wrapper" style={{ width: imgSrcs.length + "00%", transform: `translate(${-100 / imgSrcs.length * this.state.currentImgIdx}%)` }}>
+                        {imgSrcs.map(src => <ImgBgBlur src={src} alt="journey picture" key={src} />)}
+                    </div >
                     {(this.state.currentImgIdx !== 0) && <button onClick={this.prevImage} className="slider_prevBtn">
                         <img src={arrowBtn} alt="left arrow" />
                     </button>}
-                    {(this.state.currentImgIdx !== this.numOfImgs - 1) && <button onClick={this.nextImage} className="slider_nextBtn">
+                    {(this.state.currentImgIdx !== imgSrcs.length - 1) && <button onClick={this.nextImage} className="slider_nextBtn">
                         <img src={arrowBtn} alt="right arrow" />
                     </button>}
                 </div>
-                <div className="slideshow_idx-indicators">{this.numOfImgs > 1 && indicatorComps}</div>
+                <div className="slideshow_idx-indicators">{imgSrcs.length > 1 && indicatorComps}</div>
             </div>
         );
     }

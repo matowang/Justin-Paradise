@@ -2,6 +2,7 @@ import React from 'react';
 import journeysData from '../data/journeys/journeys-data.json';
 import Slideshow from './Slideshow.js';
 import ReactMarkdown from 'react-markdown';
+import { dateSlashNotation } from '../modules/dateFormats.js';
 
 export default class Journey extends React.Component {
     constructor(props) {
@@ -56,9 +57,7 @@ class JourneyCard extends React.Component {
     }
     render() {
         const { title, date } = this.props;
-        const dateSlashNotation = ({ month, day, year }) => {
-            return (month ? `${month}/` : '') + (day ? `${day}/` : '') + (year ? year : '')
-        }
+
         return (
             <section className="article-font-sizing article-fonts-style journey_section">
                 <h2 className="responsive-text-padding">{title}</h2>
