@@ -1,0 +1,47 @@
+#articles-page {
+    position: relative;
+    width: 100%;
+    a{
+        text-decoration: none;
+        color: black;
+        &:hover {
+            h2{
+                text-decoration: underline;
+            }
+        }
+    }
+    @include tablet-size{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        a:hover {
+            img {
+                transform: scale(1.2);
+                filter: blur(0.5rem);
+            }
+        }
+    }
+}
+.article-card {
+    margin-bottom: 2rem;
+    .img-wrapper {
+        width: 100%;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+        @include tablet-size{
+            margin: auto;
+            height: 20rem;
+            img {
+                height: 20rem;
+                object-fit: cover;
+                transform: scale(1);
+                transition: 500ms transform ease-in-out;
+                transition: 100ms filter ease-in-out;
+            }
+        }
+    }
+    h2, p {
+        padding: 0 1rem;
+    }
+}

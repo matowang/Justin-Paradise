@@ -5,10 +5,12 @@ import articlesData from "../data/articles/articles-data.json";
 export default class Articles extends React.Component {
     render() {
         const cardComponents = articlesData.map(a =>
-            <ArticleCard imgSrc={a.frontImg.src} title={a.title} intro={a.intro} link={`articles/${a.id}`} key={a.id} />
+            <Link to={`articles/${a.id}`}>
+                <ArticleCard imgSrc={a.frontImg.src} title={a.title} intro={a.intro} key={a.id} />
+            </Link>
         );
         return (
-            <div>
+            <div id="articles-page" className="article-fonts-style">
                 {cardComponents}
             </div>
         );
@@ -31,8 +33,8 @@ class ArticleCard extends React.Component {
     render() {
         return (
             <article className="article-card">
-                <img src={this.state.imageSource} alt="Article" width="100px"></img>
-                <h2><Link to={this.props.link}>{this.props.title}</Link></h2>
+                <div className="img-wrapper"><img src={this.state.imageSource} alt="Article"></img></div>
+                <h2>{this.props.title}</h2>
                 <p className="article-card__intro">{this.props.intro}</p>
             </article>
         );
