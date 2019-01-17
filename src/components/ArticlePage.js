@@ -36,7 +36,7 @@ export default class ArticlePage extends React.Component {
             .catch(e => console.log(e));
     }
     componentWillUnmount() {
-        document.title = "Justin Paradise";
+        document.title = "Justin Hoong";
     }
     render() {
         const articleData = this.articleData;
