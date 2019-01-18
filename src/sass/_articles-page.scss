@@ -1,6 +1,8 @@
 #articles-page {
     position: relative;
     width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
     a{
         text-decoration: none;
         color: black;
@@ -12,6 +14,7 @@
     }
     @include tablet-size{
         display: grid;
+        grid-gap: 2rem;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         a:hover {
             img {
@@ -23,6 +26,11 @@
 }
 .article-card {
     margin-bottom: 2rem;
+    -webkit-box-shadow: 0px 3px 14px -2px rgba(135,135,135,1);
+    -moz-box-shadow: 0px 3px 14px -2px rgba(135,135,135,1);
+    box-shadow: 0px 3px 14px -2px rgba(135,135,135,1);
+    border-radius: 1rem;
+    overflow: hidden;
     .img-wrapper {
         width: 100%;
         overflow: hidden;
@@ -30,14 +38,14 @@
             width: 100%;
         }
         @include tablet-size{
-            margin: auto;
+            margin: 0;
             height: 20rem;
             img {
                 height: 20rem;
                 object-fit: cover;
                 transform: scale(1);
                 transition: 300ms transform ease-in-out;
-                transition: 100ms filter ease-in-out;
+                transition: 100ms filter linear;
             }
         }
     }
