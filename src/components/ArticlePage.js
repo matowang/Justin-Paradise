@@ -3,12 +3,14 @@ import articlesData from '../data/articles/articles-data.json';
 import ReactMarkdown from 'react-markdown';
 
 import monthNames from '../data/months.json';
-
+import { setTitle, setDescription, resetAll } from '../headAttributes.js';
 
 export default class ArticlePage extends React.Component {
     constructor(props) {
         super(props);
         this.articleData = articlesData.find(x => x.id === parseInt(props.match.params.id));
+        setTitle(this.articleData.title);
+        setDescription(this.articleData.intro);
         console.log("Directed to article:" + props.match.params.id);
         this.state = {
             contentComponent: "Loading...",
@@ -17,7 +19,6 @@ export default class ArticlePage extends React.Component {
     }
     componentDidMount() {
         const articleData = this.articleData;
-        document.title = articleData.title;
         import(`../data/articles${articleData.contentSrc}`) //gets markdown url
             .then((module) => { //markdown url stored in module
                 fetch(module.default).then(response => //gets text from module with module url
@@ -36,7 +37,7 @@ export default class ArticlePage extends React.Component {
             .catch(e => console.log(e));
     }
     componentWillUnmount() {
-        document.title = "Justin Hoong";
+        resetAll();
     }
     render() {
         const articleData = this.articleData;

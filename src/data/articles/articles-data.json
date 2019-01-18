@@ -46,52 +46,6 @@
         "contentSrc": "/article-template/content.md"
     },
     {
-        "id": 223456,
-        "title": "Article Template2",
-        "author": {
-            "firstName": "Matthew",
-            "middleName": "",
-            "lastName": "Wang",
-            "title": ""
-        },
-        "intro": "Markdown is a lightweight and easy-to-use syntax for styling all forms of writing on the GitHub plata lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platfora lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platforform.",
-        "date": {
-            "month": 12,
-            "day": 31,
-            "year": 2018
-        },
-        "frontImg": {
-            "src": "/article-template/front-img.png",
-            "alt": "Front picture description",
-            "top": "50%",
-            "left": "0%"
-        },
-        "contentSrc": "/article-template/content.md"
-    },
-    {
-        "id": 323456,
-        "title": "Article Template3",
-        "author": {
-            "firstName": "Matthew",
-            "middleName": "",
-            "lastName": "Wang",
-            "title": ""
-        },
-        "intro": "Markdown is a lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platfoa lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platforrm.",
-        "date": {
-            "month": 12,
-            "day": 31,
-            "year": 2018
-        },
-        "frontImg": {
-            "src": "/article-template/front-img.png",
-            "alt": "Front picture description",
-            "top": "50%",
-            "left": "0%"
-        },
-        "contentSrc": "/article-template/content.md"
-    },
-    {
         "id": 327456,
         "title": "JPWEB1001",
         "author": {
