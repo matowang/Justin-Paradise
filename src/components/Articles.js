@@ -5,8 +5,8 @@ import articlesData from "../data/articles/articles-data.json";
 export default class Articles extends React.Component {
     render() {
         const cardComponents = articlesData.map(a =>
-            <Link to={`articles/${a.id}`}>
-                <ArticleCard imgSrc={a.frontImg.src} title={a.title} intro={a.intro} key={a.id} />
+            <Link to={`articles/${a.id}`} key={a.id}>
+                <ArticleCard imgSrc={a.frontImg.src} title={a.title} intro={a.intro} />
             </Link>
         );
         return (

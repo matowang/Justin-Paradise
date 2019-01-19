@@ -106,4 +106,5 @@ Now you're done! Wasn't that easy? Just wait a few minutes for the website to bu
 ## Tips
 - Before you start making changes next time make sure to run `git pull` in the terminal. This will make sure your files are in sync with the master branch (the current most updated files).
 - To put images into markdown use the `![description of image](imgurl)` format. For this article, I uploaded my images to [imgur](https://imgur.com/a/KP1v5Kl) and copied the image link. To copy image link, right click the image and click "Copy image address"
+
 ![screenshot of copying address of image](https://i.imgur.com/1TgDV55.png)
