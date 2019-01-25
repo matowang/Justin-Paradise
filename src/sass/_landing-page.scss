@@ -1,22 +1,25 @@
 @import 'variables.scss';
+
 #landing-page {
     padding-top: $navbar-height;
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
     max-width: 100%;
-    background: $base-c1;
     color: white;
-    text-align: center;
+    text-align: left;
+    padding: 3rem;
     font-family: $karla;
     font-size: 2rem;
+    background: url(../assets/from-the-dark-pure.jpg) center / cover no-repeat;
     p {
-        margin: 1rem;
+        margin: 0;
     }
     h1 {
-        font-size: 3rem;
+        font-size: 2em;
         margin: 0;
         display: inline;
+        line-height: 1em;
     }
     button {
         background: none;

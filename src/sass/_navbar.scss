@@ -1,11 +1,15 @@
 @import 'variables.scss';
 nav {
-    background: $base-c1;
+    background: linear-gradient(rgba($base-c1, 0.5),rgba($base-c1, 0));
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     z-index: 1;
+    transition: background-color 700ms ease-in-out;
+    &:hover {
+        background: $base-c1;
+    }
     ul{
         list-style: none;
         display: flex;
