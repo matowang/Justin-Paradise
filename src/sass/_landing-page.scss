@@ -1,14 +1,13 @@
 @import 'variables.scss';
 
 #landing-page {
-    padding-top: $navbar-height;
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
     max-width: 100%;
     color: white;
     text-align: left;
-    padding: 3rem;
+    padding: 5rem 5%;
     font-family: $karla;
     font-size: 2rem;
     background: url(../assets/from-the-dark-pure.jpg) center / cover no-repeat;

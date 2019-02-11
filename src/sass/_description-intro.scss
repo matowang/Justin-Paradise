@@ -1,12 +1,12 @@
 @import '_variables.scss';
 #description-intro {
     background: white url("../assets/portrait.svg") no-repeat right;
-    font: 1.2rem $roboto;
+    font: 1.5rem $roboto;
     color: $base-c1;
     padding: 1em;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     
     .decor-line {
         height: 0.5em;

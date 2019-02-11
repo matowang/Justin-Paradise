@@ -4,7 +4,6 @@ import ReactMarkdown from 'react-markdown';
 import FBLike from './FBLike.js';
 
 import monthNames from '../data/months.json';
-import { setHeadAttributes, resetAll } from '../modules/headAttributes.js';
 
 export default class ArticlePage extends React.Component {
     constructor(props) {
@@ -35,21 +34,10 @@ export default class ArticlePage extends React.Component {
             })
             .catch(e => console.log(e));
     }
-    componentWillUnmount() {
-        resetAll();
-    }
     render() {
         const articleData = this.articleData;
         const author = articleData.author;
         const date = articleData.date;
-        setHeadAttributes(
-            articleData.title,
-            articleData.intro,
-            `https://www.justinhoong.com${this.state.frontImageSrc}`,
-            articleData.frontImg.alt,
-            "article",
-            `https://www.justinhoong.com/${this.articleData.id}`
-        );
         return (
             <article id="article-page" className="article-font-sizing">
                 <header>
