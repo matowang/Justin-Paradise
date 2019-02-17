@@ -20,12 +20,13 @@
         display: inline;
         line-height: 1em;
     }
-    button {
+    #check-me-out-button {
         background: none;
         border: solid white 0.1em;
         border-radius: 0.5em;
         color: white;
         font-size: 1rem;
         padding: 0.5em 1em;
+        text-decoration: none;
     }
 }
