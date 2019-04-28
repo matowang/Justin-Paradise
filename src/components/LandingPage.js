@@ -4,9 +4,9 @@ class LandingPage extends React.Component {
         return (
             <div id="landing-page">
                 <div >
-                    <p>Hi, I'm </p><h1>Justin Hoong</h1><span>,</span><p> and welcome<br /> to my<br /> paradise</p>
+                    <p>Support them <br />for the world <br />they built.</p>
                 </div>
-                <a id="check-me-out-button" onClick={this.props.scrollToDescription} href="#description-intro">Check me out</a>
+                <a id="check-me-out-button" onClick={this.props.scrollToDescription} href="#description-intro">More on</a>
             </div>
         )
             ;

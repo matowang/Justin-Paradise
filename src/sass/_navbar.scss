@@ -36,6 +36,10 @@ nav {
                     border-bottom: 0.1rem solid white; 
                 }
             }
+            & h1{
+                text-transform: none;
+                font-family: $lora;
+            }
         }
     }
 }
