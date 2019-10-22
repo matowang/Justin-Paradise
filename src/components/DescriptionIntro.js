@@ -5,7 +5,7 @@ class DescriptionIntro extends React.Component {
         return (
             <section id="description-intro">
                 <div className="decor-line" />
-                <h2>About</h2>
+                <h2>Taipei→Berkeley</h2>
                 <p>I’m never a traveler. But I enjoy travelling, whether it’s a one-day trip, a one-week visit, or a one-month travel. I regard studying abroad as a college student as a travel, only that the schedule of this longer trip is a bit different. </p>
 
                 <p>I feel fortunate and blissful to have this opportunity, an accomplished goal to explore the land I’ve always dreamed of. I still remember the time when I was little, holding a guidebook about San Francisco, as I read through the last page of the book that quoted, “the purpose of every trip is to plan the next trip.” The purpose of this trip, studying at college, is indeed to plan the future trips, yet this trip brings me something very unique. It’s the chance to encounter the stories of many things and many people with diverse backgrounds. The encounters of those stories have shaped me to choose nutritional science as the focus of my studies. I believe that the journey of learning nutritional science not just reflects on my interest in food and health in general, but opens up my career goal in making a community-based impact that would reach beyond the field of nutrition. I hope that this website can serve as both a platform about me and a place where I can share the stories of the many stories I’ve experienced while studying that I’d like to highlight. </p>
