@@ -20,15 +20,15 @@ const Footer = (props) => {
                 <section id="footer_section-container">
                     <div className="footer_section">
                         <div className="decor-line" />
-                        <p>consectetur quis laboris. Aute laborum nisi nulla aliqua elit Lorem sit culpa reprehenderit aliqaboris. Aute laborum nisi nulla aliqua elit Lorem sit culpa reprehenderit aliquatdent eu. Ipsum officia dolor velit consectetur est exc anim proident eu. Ipsum officia dolor velit consectetur est excepteuuat aliqua anim proident eu. Ipsum officia dolor velit consectetur est exc anim proident eu. Ipsum officia dolor velit consectetur est excepteur do incididunt tempor qui dolor ipsum laboris tempor.</p>
+                        <p>Community</p>
                     </div>
                     <div className="footer_section">
                         <div className="decor-line" />
-                        <p>r cillum consectetur quis laboris. Aute laborum nisi nulla aliqua elit Lorem sit culpa reprehenderit aliqua anim proident eu. Ipsum officia dolor velit consectetur est excepteur do incididunt tempor qui dolor ipsum laboris tempor.</p>
+                        <p>Health</p>
                     </div>
                     <div className="footer_section">
                         <div className="decor-line" />
-                        <p>Fugiat qui adipisicing excepteur pariatur ullamco do sunt cillum pariatur elit dolor ut. Quis ex labore qui esse dolore sint laborum reprehenderit id. Sunt aliquip aute culpa incididunt aliqua. Quis tempor in pariatur cillum conse.</p>
+                        <p>Belief</p>
                     </div>
                 </section>
                 <section id="footer_credit">
